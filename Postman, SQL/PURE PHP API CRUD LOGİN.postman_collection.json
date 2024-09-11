@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "d691ad99-90f2-4110-be77-1f9ff0728a8c",
+		"name": "PURE PHP API CRUD LOGİN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16942239"
+	},
+	"item": [
+		{
+			"name": "All Goods",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://pure-php-api-crud-login.test/api.php/goods",
+					"protocol": "http",
+					"host": [
+						"pure-php-api-crud-login",
+						"test"
+					],
+					"path": [
+						"api.php",
+						"goods"
+					]
+				},
+				"description": "Tüm ürünleri listeler"
+			},
+			"response": []
+		},
+		{
+			"name": "Goods Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://pure-php-api-crud-login.test/api.php/goods",
+					"protocol": "http",
+					"host": [
+						"pure-php-api-crud-login",
+						"test"
+					],
+					"path": [
+						"api.php",
+						"goods"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "Samsung",
+							"disabled": true
+						},
+						{
+							"key": "type",
+							"value": "Phone",
+							"disabled": true
+						},
+						{
+							"key": "model",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "min_price",
+							"value": "50",
+							"disabled": true
+						},
+						{
+							"key": "max_price",
+							"value": "45",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Tüm ürünleri listeler"
+			},
+			"response": []
+		},
+		{
+			"name": "{id} Goods",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://pure-php-api-crud-login.test/api.php/goods/21",
+					"protocol": "http",
+					"host": [
+						"pure-php-api-crud-login",
+						"test"
+					],
+					"path": [
+						"api.php",
+						"goods",
+						"21"
+					]
+				},
+				"description": "ID'si 1 olanı listeler"
+			},
+			"response": []
+		},
+		{
+			"name": "Add goods",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"brand\": \"New\",\r\n  \"type\": \"TV\",\r\n  \"model\": \"TV300\",\r\n  \"price\": 160\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://pure-php-api-crud-login.test/api.php/goods",
+					"protocol": "http",
+					"host": [
+						"pure-php-api-crud-login",
+						"test"
+					],
+					"path": [
+						"api.php",
+						"goods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{id} Edit goods",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"brand\": \"Updated\",\r\n  \"type\": \"TV\",\r\n  \"model\": \"TV300\",\r\n  \"price\": 160\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://pure-php-api-crud-login.test/api.php/goods/21",
+					"protocol": "http",
+					"host": [
+						"pure-php-api-crud-login",
+						"test"
+					],
+					"path": [
+						"api.php",
+						"goods",
+						"21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{id} Delete goods",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://pure-php-api-crud-login.test/api.php/goods/21",
+					"protocol": "http",
+					"host": [
+						"pure-php-api-crud-login",
+						"test"
+					],
+					"path": [
+						"api.php",
+						"goods",
+						"21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "a@a.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "11223344",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://pure-php-api-crud-login.test/login.php",
+					"protocol": "http",
+					"host": [
+						"pure-php-api-crud-login",
+						"test"
+					],
+					"path": [
+						"login.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://pure-php-api-crud-login.test/logout.php",
+					"protocol": "http",
+					"host": [
+						"pure-php-api-crud-login",
+						"test"
+					],
+					"path": [
+						"logout.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
